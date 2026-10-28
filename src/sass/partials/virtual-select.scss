@@ -58,6 +58,7 @@
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+  user-select: none;
 }
 
 .vscomp-arrow {
@@ -381,6 +382,7 @@
   &[disabled] {
     cursor: not-allowed;
     user-select: none;
+    background-color: #e9ecef;
 
     .vscomp-wrapper {
       opacity: 0.7;

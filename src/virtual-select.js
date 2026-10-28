@@ -1469,8 +1469,8 @@ export class VirtualSelect {
       emptyValue: '',
       searchDelay: 300,
       focusSelectedOptionOnOpen: true,
-      showDuration: 300,
-      hideDuration: 200,
+      showDuration: 0, //300
+      hideDuration: 0, //300
     };
 
     if (hasOptionDescription) {
