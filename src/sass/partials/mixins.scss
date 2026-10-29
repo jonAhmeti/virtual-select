@@ -5,11 +5,12 @@
 }
 
 @mixin checkbox-checked {
-  @include prefix(transform, rotate(45deg) translate(1px, -4px));
-  border-color: v.$primary-color;
-  border-left-color: transparent;
-  border-top-color: transparent;
-  width: 50%;
+  // @include prefix(transform, rotate(45deg) translate(1px, -4px));
+  // border-color: v.$primary-color;
+  // border-left-color: transparent;
+  // border-top-color: transparent;
+  // width: 50%;
+  background-color: v.$primary-color;
 }
 
 @mixin checkbox-checked-rtl {

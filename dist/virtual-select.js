@@ -1153,6 +1153,7 @@ class VirtualSelect {
       html += `<div role="option" aria-selected="${isSelected}" id="vscomp-option-${uniqueId}-${index}"
           class="${optionClasses}" data-value="${optionValueAttr}" data-index="${index}"
           data-visible-index="${d.visibleIndex}"
+          title="${d.label}${d.description ? ' (' + d.description + ')' : ''}"
           tabindex=${tabIndexValue} ${groupIndexText} ${ariaDisabledText} ${ariaLabel} ${ariaAttrs}
         >
           ${leftSection}
@@ -1979,7 +1980,7 @@ class VirtualSelect {
     const defaultOptions = {
       dropboxWrapper: 'self',
       valueKey: 'value',
-      labelKey: 'label',
+      labelKey: 'text',
       descriptionKey: 'description',
       aliasKey: 'alias',
       ariaLabelText: 'Options list',
@@ -2031,7 +2032,8 @@ class VirtualSelect {
       searchDelay: 300,
       focusSelectedOptionOnOpen: true,
       showDuration: 0,
-      hideDuration: 0
+      //300
+      hideDuration: 0 //300
     };
     if (hasOptionDescription) {
       defaultOptions.optionsCount = 4;
@@ -4836,7 +4838,9 @@ VirtualSelect.lastInteractedInstance = null;
 VirtualSelect.secureTextWarningShown = false;
 
 // Page-level default props, applied under per-instance options (see setGlobalDefaults)
-VirtualSelect.globalDefaults = {};
+VirtualSelect.globalDefaults = {
+  hasOptionDescription: true
+};
 
 /** polyfill to fix an issue in ie browser */
 if (typeof NodeList !== 'undefined' && NodeList.prototype && !NodeList.prototype.forEach) {
