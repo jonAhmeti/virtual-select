@@ -4688,7 +4688,8 @@ VirtualSelect.secureTextWarningShown = false;
 
 // Page-level default props, applied under per-instance options (see setGlobalDefaults)
 VirtualSelect.globalDefaults = {
-  hasOptionDescription: true
+  hasOptionDescription: true,
+  silentInitialValueSet: true
 };
 
 /** polyfill to fix an issue in ie browser */
